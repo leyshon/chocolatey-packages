@@ -18,6 +18,7 @@
 		<licenseUrl>https://msdn.microsoft.com/en-us/library/mt706449.aspx</licenseUrl>
 		<dependencies>
             <dependency id="KB2919355" version="1.0.20160719" />
+             <dependency id="chocolatey-core.extension" version="1.1.0" />
         </dependencies>
     </metadata>
 	<files>
