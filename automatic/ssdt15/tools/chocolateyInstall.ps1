@@ -12,12 +12,14 @@ if ($Matches.Major -eq 6 -and $Matches.Minor -eq 3)
     }
 }
 
+$pp = Get-PackageParameters
+
 $packageArgs = @{
   packageName   = 'ssdt15'
   unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   fileType      = 'exe'
   url           = $url
-  silentArgs    = '/passive /norestart'
+  silentArgs    = '/passive /norestart', $pp
   validExitCodes= @(0)
   softwareName  = 'ssdt15*'
   checksum      = $checksum
